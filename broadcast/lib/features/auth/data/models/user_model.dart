@@ -1,18 +1,16 @@
-import 'dart:nativewrappers/_internal/vm_shared/lib/date_patch.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:core';
 
 class UserModel {
-  final String id;           // Firebase UID
-  final String firstName;    
-  final String lastName;     
-  final String username;     
-  final String email;        
-  final String? photoUrl;    // Optional profile photo
-  final String? bio;         // Optional bio
+  final String id;
+  final String firstName;
+  final String lastName;
+  final String username;
+  final String email;
+  final String? photoUrl;
+  final String? bio;
   final DateTime createdAt;
-  final DateTime? updatedAt; // Nullable
+  final DateTime? updatedAt;
 
   UserModel({
     required this.id,
@@ -26,7 +24,7 @@ class UserModel {
     this.updatedAt,
   });
 
-  // From Firestore document
+  // Convert Firestore map → UserModel
   factory UserModel.fromMap(Map<String, dynamic> map, String documentId) {
     return UserModel(
       id: documentId,
@@ -43,7 +41,7 @@ class UserModel {
     );
   }
 
-  // Convert to Firestore document
+  // Convert UserModel → Firestore map
   Map<String, dynamic> toMap() {
     return {
       'firstName': firstName,
@@ -57,7 +55,7 @@ class UserModel {
     };
   }
 
-  // CopyWith for updates
+  // Update part of the model easily
   UserModel copyWith({
     String? firstName,
     String? lastName,
