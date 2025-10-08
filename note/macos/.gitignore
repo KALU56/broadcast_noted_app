@@ -1,0 +1,51 @@
+# Flutter-related
+**/Flutter/ephemeral/
+**/Pods/
+
+# Xcode-related
+**/dgph
+**/xcuserdata/
+./vs# =========================
+# Flutter and Dart
+# =========================
+.dart_tool/
+.packages
+.pub-cache/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Ignore generated files
+coverage/
+android/app/debug
+android/app/profile
+android/app/release
+
+# =========================
+# iOS / macOS / Xcode
+# =========================
+**/Flutter/ephemeral/
+**/Pods/
+**/dgph
+**/xcuserdata/
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcscmblueprint
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+.idea/
+*.iml
+
+# =========================
+# System Files
+# =========================
+.DS_Store
+Thumbs.db
